@@ -1,26 +1,75 @@
-# 📦 AssetFlow - ระบบยืม-คืนอุปกรณ์ (Equipment Borrow & Return System)
+<p align="center">
+  <img src="labExpressNodeJS/uploads/img/logo.png" alt="AssetFlow Logo" width="240" />
+</p>
 
-[![Node.js](https://img.shields.io/badge/Node.js-v18+-68a063?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Express.js](https://img.shields.io/badge/Express.js-4.16+-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas%20%2F%20Mongoose-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
-[![EJS](https://img.shields.io/badge/Template-EJS-B4CA65?style=for-the-badge&logo=ejs&logoColor=black)](https://ejs.co/)
+<h1 align="center">📦 AssetFlow - ระบบยืม-คืนอุปกรณ์ (Equipment Borrow & Return System)</h1>
+
+<p align="center">
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-v18+-68a063?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" /></a>
+  <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/Express.js-4.16+-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express.js" /></a>
+  <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/MongoDB-Atlas%20%2F%20Mongoose-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" /></a>
+  <a href="https://getbootstrap.com/"><img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" /></a>
+  <a href="https://ejs.co/"><img src="https://img.shields.io/badge/Template-EJS-B4CA65?style=for-the-badge&logo=ejs&logoColor=black" alt="EJS" /></a>
+</p>
 
 > **AssetFlow** เป็นเว็บแอปพลิเคชันสำหรับบริหารจัดการการยืม-คืนอุปกรณ์ ครุภัณฑ์ และระบบแจ้งซ่อมบำรุงแบบครบวงจร พัฒนาขึ้นเพื่อช่วยให้องค์กรหรือสถานศึกษาควบคุม ตรวจสอบสถานะ และติดตามอุปกรณ์ได้อย่างมีประสิทธิภาพ พร้อมระบบแจ้งเตือนผ่านอีเมลแบบอัตโนมัติ
 
 ---
 
+## 🖼️ ภาพตัวอย่างต้นแบบและระบบ (System Prototype & Preview)
+
+### ✨ ภาพรวมระบบ (Landing Page & Overview)
+<div align="center">
+  <img src="labExpressNodeJS/uploads/img/index.png" alt="AssetFlow Landing Page & Prototype" width="85%" style="border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
+  <p><i>หน้า Landing Page สำหรับแนะนำระบบ สถิติการยืม-คืน และภาพรวมการทำงาน</i></p>
+</div>
+
+<br />
+
+### 📱 1. หน้าจอฝั่งผู้ใช้งานทั่วไป (User Interfaces)
+
+| ฟังก์ชันและหน้าจอ | ภาพตัวอย่างต้นแบบ (UI Prototype) |
+| :--- | :--- |
+| **หน้าแดชบอร์ด (User Dashboard)**<br>แสดงสถานะการยืม ประวัติ และทางลัดเมนู | <img src="AssetFlow/User - แดชบอร์ด.png" width="460" alt="User Dashboard" /> |
+| **ค้นหาและเลือกอุปกรณ์ (Browse & Search)**<br>ค้นหาตามชื่อ และกรองตามหมวดหมู่ | <img src="AssetFlow/User - ค้นหาอุปกรณ์.png" width="460" alt="Browse Equipments" /> |
+| **ยื่นคำขอยืมอุปกรณ์ (Borrow Request)**<br>ระบุวันที่ต้องการคืน และเหตุผลการยืม | <img src="AssetFlow/User - ส่งคำขอยืมอุปกรณ์.png" width="460" alt="Submit Borrow Request" /> |
+| **รายละเอียดคำขอยืม (Request Details)**<br>ตรวจสอบข้อมูลคำขอ และสถานะการอนุมัติ | <img src="AssetFlow/User - รายละเอียดคำขอยืมอุปกรณ์.png" width="460" alt="Borrow Request Details" /> |
+| **ประวัติการยืม-คืน (Borrow History)**<br>ติดตามสถานะรายการยืมทั้งหมดของผู้ใช้ | <img src="AssetFlow/User - รายการยืมและคืนอุปกรณ์.png" width="460" alt="Borrow History" /> |
+| **การส่งคืนอุปกรณ์ (Return Equipment)**<br>ขั้นตอนการแจ้งส่งคืนอุปกรณ์เมื่อครบกำหนด | <img src="AssetFlow/User - คืนอุปกรณ์.png" width="460" alt="Return Equipment" /> |
+| **แจ้งซ่อมอุปกรณ์ชำรุด (Repair Request)**<br>ระบุอาการเสียและส่งเรื่องให้ช่างประเมิน | <img src="AssetFlow/User - แจ้งซ่อม.png" width="460" alt="Report Broken Equipment" /> |
+| **ติดตามรายการแจ้งซ่อม (Repair History)**<br>เช็คสถานะการซ่อมและความเห็นจากแอดมิน | <img src="AssetFlow/User - รายการแจ้งซ่อม.png" width="460" alt="Repair Request List" /> |
+| **การแจ้งเตือน (Notifications)**<br>กล่องข้อความแจ้งเตือนสถานะต่างๆ | <img src="AssetFlow/User - การแจ้งเตือน.png" width="460" alt="User Notifications" /> |
+| **การตั้งค่าโปรไฟล์ (Profile Settings)**<br>แก้ไขข้อมูลส่วนตัว เปลี่ยนรหัสผ่าน และรูปโปรไฟล์ | <img src="AssetFlow/User - การตั้งค่า.png" width="460" alt="User Settings" /> |
+
+<br />
+
+### 🛡️ 2. หน้าจอฝั่งผู้ดูแลระบบ (Admin Interfaces)
+
+| ฟังก์ชันและหน้าจอ | ภาพตัวอย่างต้นแบบ (UI Prototype) |
+| :--- | :--- |
+| **จัดการคำขอยืม (Borrow Approval)**<br>อนุมัติ หรือ ปฏิเสธคำขอ พร้อมแจ้งเตือนผ่าน Email | <img src="AssetFlow/รายการคำขอยืมอุปกรณ์.png" width="460" alt="Admin Borrow Management" /> |
+| **รายละเอียดคำขอยืมและสถานะ**<br>ดูข้อมูลผู้ขอยืม วันที่คืน และบันทึกข้อความ | <img src="AssetFlow/รายการคำขอยืมอุปกรณ์-2.png" width="460" alt="Admin Borrow Details" /> |
+| **จัดการรายการอุปกรณ์ (Equipment List)**<br>คลังข้อมูลอุปกรณ์ทั้งหมดในระบบ | <img src="AssetFlow/รายการอุปกรณ์.png" width="460" alt="Admin Equipment List" /> |
+| **รายละเอียดอุปกรณ์ (Equipment Details)**<br>ดูสเปก ตำแหน่งที่ตั้ง และประวัติของอุปกรณ์ | <img src="AssetFlow/รายละเอียดอุปกรณ์.png" width="460" alt="Admin Equipment Details" /> |
+| **เพิ่มอุปกรณ์ใหม่ (Add Equipment)**<br>ฟอร์มลงทะเบียนอุปกรณ์ใหม่พร้อมอัปโหลดรูป | <img src="AssetFlow/เพิ่มอุปกรณ์.png" width="460" alt="Add Equipment Form" /> |
+| **แก้ไขข้อมูลอุปกรณ์ (Edit Equipment)**<br>ปรับปรุงรายละเอียดและอัปเดตสถานะอุปกรณ์ | <img src="AssetFlow/แก้ไขอุปกรณ์.png" width="460" alt="Edit Equipment" /> |
+| **ลบอุปกรณ์ / ถังขยะ (Soft Delete)**<br>ระบบลบอย่างปลอดภัย สามารถกู้คืนได้ | <img src="AssetFlow/ลบอุปกรณ์.png" width="460" alt="Delete Equipment" /> |
+| **จัดการงานแจ้งซ่อม (Repair Management)**<br>อัปเดตสถานะงานซ่อม และระบุ Admin Comment | <img src="AssetFlow/รายการแจ้งซ่อม.png" width="460" alt="Admin Repair Management" /> |
+
+---
+
 ## 📑 สารบัญ (Table of Contents)
 
-1. [ฟังก์ชันเด่นของระบบ (Features)](#-ฟังก์ชันเด่นของระบบ-features)
-2. [ผังการทำงานของระบบ (System Workflow)](#-ผังการทำงานของระบบ-system-workflow)
-3. [เทคโนโลยีที่ใช้พัฒนา (Tech Stack)](#-เทคโนโลยีที่ใช้พัฒนา-tech-stack)
-4. [โครงสร้างฐานข้อมูล (Database Schema)](#-โครงสร้างฐานข้อมูล-database-schema)
-5. [โครงสร้างโฟลเดอร์โปรเจกต์ (Project Structure)](#-โครงสร้างโฟลเดอร์โปรเจกต์-project-structure)
-6. [ขั้นตอนการติดตั้งและเริ่มใช้งาน (Getting Started)](#-ขั้นตอนการติดตั้งและเริ่มใช้งาน-getting-started)
-7. [การตั้งค่า Environment Variables](#-การตั้งค่า-environment-variables)
-8. [บัญชีผู้ใช้งานเริ่มต้นและการทดสอบ](#-บัญชีผู้ใช้งานเริ่มต้นและการทดสอบ)
-9. [ผู้จัดทำและข้อมูลวิชา](#-ข้อมูลรายวิชาและผู้จัดทำ)
+1. [ภาพตัวอย่างต้นแบบและระบบ (System Prototype & Preview)](#️-ภาพตัวอย่างต้นแบบและระบบ-system-prototype--preview)
+2. [ฟังก์ชันเด่นของระบบ (Features)](#-ฟังก์ชันเด่นของระบบ-features)
+3. [ผังการทำงานของระบบ (System Workflow)](#-ผังการทำงานของระบบ-system-workflow)
+4. [เทคโนโลยีที่ใช้พัฒนา (Tech Stack)](#-เทคโนโลยีที่ใช้พัฒนา-tech-stack)
+5. [โครงสร้างฐานข้อมูล (Database Schema)](#-โครงสร้างฐานข้อมูล-database-schema)
+6. [โครงสร้างโฟลเดอร์โปรเจกต์ (Project Structure)](#-โครงสร้างโฟลเดอร์โปรเจกต์-project-structure)
+7. [ขั้นตอนการติดตั้งและเริ่มใช้งาน (Getting Started)](#-ขั้นตอนการติดตั้งและเริ่มใช้งาน-getting-started)
+8. [การตั้งค่า Environment Variables](#-การตั้งค่า-environment-variables)
+9. [บัญชีผู้ใช้งานเริ่มต้นและการทดสอบ](#-บัญชีผู้ใช้งานเริ่มต้นและการทดสอบ)
+10. [ผู้จัดทำและข้อมูลวิชา](#-ข้อมูลรายวิชาและผู้จัดทำ)
 
 ---
 
@@ -127,6 +176,9 @@ graph TD
 ```text
 project_CP363205_EquipmentBorrow-ReturnSystem/
 ├── README.md                          # เอกสารคู่มือโปรเจกต์
+├── AssetFlow/                         # โฟลเดอร์จัดเก็บภาพต้นแบบ UI Prototype & Screenshots
+│   ├── User - *.png                   # ภาพตัวอย่างหน้าจอฝั่ง User
+│   └── *.png                          # ภาพตัวอย่างหน้าจอฝั่ง Admin
 └── labExpressNodeJS/                  # ซอร์สโค้ดหลักของระบบ
     ├── app.js                         # จุดเริ่มต้นของ Express Application และการตั้งค่า Middleware
     ├── package.json                   # การประกาศ Dependencies และสคริปต์สั่งรัน
@@ -148,6 +200,7 @@ project_CP363205_EquipmentBorrow-ReturnSystem/
     │   ├── index.js                   # Route หน้าแรก, เข้าสู่ระบบ, สมัครสมาชิก
     │   └── users.js                   # Route สำหรับผู้ใช้งานทั่วไป (User)
     ├── uploads/                       # โฟลเดอร์เก็บไฟล์ภาพที่อัปโหลด (Avatar, Equipment images)
+    │   └── img/                       # รูปภาพต้นแบบ, โลโก้ และภาพประกอบหน้าเว็บ
     └── views/                         # EJS Templates สำหรับแสดงผลหน้าเว็บ
         ├── layouts/                   # Master Layouts (index, auth, navadmin, navuser)
         ├── login.ejs                  # หน้าเข้าสู่ระบบ
