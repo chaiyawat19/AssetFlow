@@ -16,21 +16,11 @@
 
 ---
 
-## 🖼️ ภาพตัวอย่างต้นแบบและระบบ (System Prototype & Preview)
-
-### ✨ ภาพรวมระบบ (Landing Page & Overview)
-<div align="center">
-  <img src="labExpressNodeJS/uploads/img/index.png" alt="AssetFlow Landing Page & Prototype" width="85%" style="border-radius: 12px; box-shadow: 0 4px 14px rgba(0,0,0,0.15);" />
-  <p><i>หน้า Landing Page สำหรับแนะนำระบบ สถิติการยืม-คืน และภาพรวมการทำงาน</i></p>
-</div>
-
-<br />
 
 ### 📱 1. หน้าจอฝั่งผู้ใช้งานทั่วไป (User Interfaces)
 
 | ฟังก์ชันและหน้าจอ | ภาพตัวอย่างต้นแบบ (UI Prototype) |
 | :--- | :--- |
-| **หน้าแดชบอร์ด (User Dashboard)**<br>แสดงสถานะการยืม ประวัติ และทางลัดเมนู | <img src="AssetFlow/User - แดชบอร์ด.png" width="460" alt="User Dashboard" /> |
 | **ค้นหาและเลือกอุปกรณ์ (Browse & Search)**<br>ค้นหาตามชื่อ และกรองตามหมวดหมู่ | <img src="AssetFlow/User - ค้นหาอุปกรณ์.png" width="460" alt="Browse Equipments" /> |
 | **ยื่นคำขอยืมอุปกรณ์ (Borrow Request)**<br>ระบุวันที่ต้องการคืน และเหตุผลการยืม | <img src="AssetFlow/User - ส่งคำขอยืมอุปกรณ์.png" width="460" alt="Submit Borrow Request" /> |
 | **รายละเอียดคำขอยืม (Request Details)**<br>ตรวจสอบข้อมูลคำขอ และสถานะการอนุมัติ | <img src="AssetFlow/User - รายละเอียดคำขอยืมอุปกรณ์.png" width="460" alt="Borrow Request Details" /> |
